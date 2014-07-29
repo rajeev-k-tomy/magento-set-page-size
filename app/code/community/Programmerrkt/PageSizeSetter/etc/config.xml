@@ -1,0 +1,34 @@
+<config> 
+    <modules>
+	    <Programmerrkt_PageSizeSetter>
+	        <version>1.0.0</version>
+	    </Programmerrkt_PageSizeSetter>
+    </modules>
+    <frontend>
+        <!-- <layout>
+            <updates>
+                <programmerrkt_PageSizeSetter>
+                    <file>programmerrkt_pagesizesetter.xml</file>
+                </programmerrkt_PageSizeSetter>
+            </updates>
+        </layout> -->
+        <events>
+            <controller_action_layout_generate_blocks_after>
+                <observers>
+                    <set_page_size_category>
+                        <type>singleton</type>
+                        <class>programmerrkt_pagesizesetter/observer</class>
+                        <method>setPageSizeForCategory</method>
+                    </set_page_size_category>
+                </observers>
+            </controller_action_layout_generate_blocks_after>
+        </events>
+    </frontend>
+    <global>
+        <models>
+            <programmerrkt_pagesizesetter>
+                <class>Programmerrkt_PageSizeSetter_Model</class>
+            </programmerrkt_pagesizesetter>
+        </models>
+    </global>
+</config>
