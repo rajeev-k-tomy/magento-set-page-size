@@ -34,37 +34,21 @@ File: `app / code / community / Programmerrkt / PageSizeSetter / Model / Observe
 
   <pre>
   /**
-  
-  *
-  
   * Holds special category Id
-  
   *
-  
   * @var int
-  
   *
-
   */
   
   protected $_categoryId = 23 ;
   
   
   /**
-  
   *
-  
   * Holds page Size
-  
   *
-  
-
   * @var int
-  
-
   *
-  
-  
   */
   
   protected $_pageSize = 24 ;
