@@ -32,7 +32,8 @@ In order to make this extension useful to you, you just want to specify category
 
 File: `app / code / community / Programmerrkt / PageSizeSetter / Model / Observer.php`
 
-  /**
+
+  `/**
   *
   * Holds special category Id
   *
@@ -47,6 +48,8 @@ File: `app / code / community / Programmerrkt / PageSizeSetter / Model / Observe
   * @var int
   *
   */
-  protected $_pageSize = 24 ;
+  protected $_pageSize = 24 ;`
+
+
 
 set these two properties as per your need. You are done. Rest will do this extension.
