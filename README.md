@@ -33,25 +33,12 @@ In order to make this extension useful to you, you just want to specify category
 File: `app / code / community / Programmerrkt / PageSizeSetter / Model / Observer.php`
 
   <pre>
-  /**
-  * Holds special category Id
-  *
-  * @var int
-  *
-  */
-  
-  protected $_categoryId = 23 ;
   
   
-  /**
-  *
-  * Holds page Size
-  *
-  * @var int
-  *
-  */
+    protected $_categoryId = 23 ;
   
-  protected $_pageSize = 24 ;
+ 
+    protected $_pageSize = 24 ;
   </pre>
 
 
