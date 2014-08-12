@@ -32,7 +32,7 @@ In order to make this extension useful to you, you just want to specify category
 
 File: `app / code / community / Programmerrkt / PageSizeSetter / Model / Observer.php`
 
-
+  <?php
   /**
   
   *
