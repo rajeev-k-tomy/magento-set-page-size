@@ -1,3 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Programmerrkt_PageSizeSetter extension
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE_PSS.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ *
+ * @category       Programmerrkt
+ * @package        Programmerrkt_PageSizeSetter
+ * @copyright      Copyright (c) 2015   
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+ */
+-->
 <config> 
     <modules>
 	    <Programmerrkt_PageSizeSetter>
@@ -5,13 +23,6 @@
 	    </Programmerrkt_PageSizeSetter>
     </modules>
     <frontend>
-        <!-- <layout>
-            <updates>
-                <programmerrkt_PageSizeSetter>
-                    <file>programmerrkt_pagesizesetter.xml</file>
-                </programmerrkt_PageSizeSetter>
-            </updates>
-        </layout> -->
         <events>
             <controller_action_layout_generate_blocks_after>
                 <observers>
