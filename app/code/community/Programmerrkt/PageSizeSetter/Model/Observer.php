@@ -50,23 +50,21 @@ class Programmerrkt_PageSizeSetter_Model_Observer
 	 */
 	public function setPageSizeForCategory(Varien_Event_Observer $observer)
 	{
-		$controller = $observer->getAction();
-		$fullActionName = $controller->getFullActionName();
-		$id = (int)$controller->getRequest()->getParam('id');
-		$handlers = $controller->getLayout()->getUpdate()->getHandles();
+		$currentCategory = Mage::registry('current_category');
 
-        //check whether current page is correspond to our special category. If not, returns
-		if ($fullActionName == "catalog_category_view" && $id == $this->_categoryId) {
-			
-			//check whether toolbar block exist or not
-			$toolbar =  $controller->getLayout()->getBlock('product_list_toolbar');
-			if ($toolbar) {
-
-				//sets page size to corresponding mode
-				$listMode = $toolbar->getCurrentMode();
-	        	$toolbar = $toolbar->addPagerLimit($listMode , $this->_pageSize);
+        //check whether current page is a category page
+		if ($currentCategory instanceof Mage_Catalog_Model_Category) {
+			//ensure the the cateogory page is our specific category
+			if ($currentCategory->getId() == $this->_categoryId) {
+				
+				//check whether toolbar block exist or not
+				$toolbar =  $observer->getLayout()->getBlock('product_list_toolbar');
+				if ($toolbar) {
+					//sets page size to corresponding mode
+					$listMode = $toolbar->getCurrentMode();
+	        		$toolbar = $toolbar->addPagerLimit($listMode , $this->_pageSize);
+				}
 			}
-			
 		}
 
 		return $this;
